@@ -13,44 +13,45 @@ import electronics from "../assets/Services Images/electronics.png";
 import gadgets from "../assets/Services Images/gadgets.png";
 import CallToAction from "../components/CallToAction";
 import "animate.css";
+import WhyChooseUs from "../components/whyChooseUs";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+import quality from "../assets/quality.png";
+import imports from "../assets/imports.png";
+import custom from "../assets/custom.png";
+import trust from "../assets/trust.png";
+import sales from "../assets/sale.png";
 
 function AboutUs() {
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scroll to the top of the page
+  }, [location.pathname]); // Trigger on route change
+
   return (
     <div className="w-full bg-white flex items-end">
       <div className="w-full pt-[10vh]">
-        <div className="animate__animated animate__fadeInUp w-full m-auto bg-white text-center pt-[50px]">
-          <h1 className="xl:text-[25px] lg:text-[23px] md:text-[20px] sm:text-[18px] text-[17px]">
+        <div className="animate__animated animate__fadeInUp w-full m-auto bg-[#008bf2] text-center mt-[10px] py-[100px]">
+          <h1 className="text-white xl:text-[25px] lg:text-[23px] md:text-[20px] sm:text-[18px] text-[17px]">
             Who We Are
           </h1>
-        </div>
-        <div className="animate__animated animate__fadeInUp w-full m-auto bg-[#008bf2] text-center mt-[10px] py-[150px]">
           <p className="xl:w-[50%] lg:w-[55%] md:w-[70%] sm:w-[90%] w-[90%] xl:text-[16px] lg:text-[16px] md:text-[14px] sm:text-[12px] text-[12px] text-white text-center leading-[1.4] m-auto">
-            At Khalak Nigeria Limited, we are more than just an import and
-            export company – we are your gateway to premium products and
-            seamless global trade. With a commitment to quality, reliability,
-            and customer satisfaction, we have built a reputation as a trusted
-            partner for businesses and individuals.
-          </p>
-
-          <h1 className="xl:text-[14px] lg:text-[15px] md:text-[14px] sm:text-[13px] text-[13px] text-[#000d1d] mt-[40px] mb-[10px] font-medium w-[100px] m-auto py-[5px] bg-white">
-            Our Story
-          </h1>
-          <p className="xl:text-[16px] lg:text-[16px] md:text-[14px] sm:text-[12px] text-[12px] xl:w-[50%] lg:w-[55%] md:w-[70%] sm:w-[90%] w-[90%] text-white text-center leading-[1.4] m-auto">
-            Khalak Nigeria Limited began with a simple mission: to bridge the
-            gap between high-quality UK products and the growing demand for them
-            in Nigeria. Over the years, we have expanded our expertise to
-            include a wide range of products, from agricultural materials and
-            electronics to textiles, automobiles, and farm equipment.
+            At Khalak Nigeria Limited, we specialize in sourcing and delivering
+            high-quality, grade-A products from the United Kingdom to meet the
+            needs of businesses and individuals across countries. Whether you’re
+            looking for agricultural materials, electronics, textiles, or
+            specialized items, we are your one-stop solution for premium
+            imports.
             <br></br>
-            <br></br>What started as a small operation has grown into a thriving
-            business, thanks to our dedication to excellence, our strong
-            relationships with UK suppliers, and our unwavering focus on
-            customer needs. Today, we are proud to serve clients across multiple
-            industries, helping them access the best products the UK has to
-            offer.
+            <br></br>
+            We are more than just an import and export company – we are your
+            gateway to premium products. With a commitment to quality,
+            reliability, and customer satisfaction, we hope to build a
+            reputation as a trusted partner for businesses and individuals.
           </p>
         </div>
-        <div className="animate__animated animate__fadeInLeft xl:w-[60%] lg:w-[65%] md:w-[70%] sm:w-[85%] w-[85%] m-auto pt-[150px]">
+        <div className="animate__animated animate__fadeInLeft xl:w-[60%] lg:w-[65%] md:w-[70%] sm:w-[85%] w-[85%] m-auto pt-[100px]">
           <div className="w-full flex justify-center xl:items-center lg:items-center md:items-center sm:items-start items-start gap-x-[30px]">
             <div className="overflow-hidden w-[40%]">
               <img className="abtImg hover:scale-[120%]" src={mission} />
@@ -74,7 +75,7 @@ function AboutUs() {
             </div>
           </div>
         </div>
-        <div className="animate__animated animate__fadeInRight xl:w-[60%] lg:w-[65%] md:w-[70%] sm:w-[85%] w-[85%] m-auto">
+        <div className="animate__animated animate__fadeInRight xl:w-[60%] lg:w-[65%] md:w-[70%] sm:w-[85%] w-[85%] xl:pt-[20px] lg:pt-[20px] md:pt-[20px] sm:pt-[50px] pt-[50px] m-auto">
           <div className="w-full flex justify-center xl:items-center lg:items-center md:items-center sm:items-start items-start gap-x-[30px]">
             <div className="w-[60%] text-right">
               <h1 className="mb-[15px] font-semibold xl:text-[20px] lg:text-[20px] md:text-[18px] sm:text-[16px] text-[16px]">
@@ -94,7 +95,7 @@ function AboutUs() {
             </div>
           </div>
         </div>
-        <div className="animate__animated animate__fadeInLeft xl:w-[60%] lg:w-[65%] md:w-[70%] sm:w-[85%] w-[85%] m-auto pb-[150px]">
+        <div className="animate__animated animate__fadeInLeft xl:w-[60%] lg:w-[65%] md:w-[70%] sm:w-[85%] w-[85%] m-auto xl:pt-[20px] lg:pt-[20px] md:pt-[20px] sm:pt-[50px] pt-[50px] pb-[100px]">
           <div className="w-full flex justify-center xl:items-center lg:items-center md:items-center sm:items-start items-start gap-x-[30px]">
             <div className="overflow-hidden w-[40%]">
               <img className="hover:scale-[120%] abtImg" src={values} />
@@ -140,7 +141,7 @@ function AboutUs() {
         </div>
         <section
           id="services"
-          className="animate__animated animate__fadeInUp services1 w-full box-border py-[150px] box-border bg-[#d4edff]"
+          className="animate__animated animate__fadeInUp services1 w-full box-border py-[100px] box-border bg-[#d4edff]"
         >
           <div className="w-full">
             <h1 className="xl:w-[150px] lg:w-[150px] md:w-[140px] sm:w-[130px] w-[130px] m-auto border-b border-b-[1px] pb-[5px] border-b-solid border-b-black text-center font-semibold xl:text-[20px] lg:text-[20px] md:text-[18px] sm:text-[16px] text-[16px] text-black">
@@ -188,7 +189,45 @@ function AboutUs() {
             </div>
           </div>
         </section>
-        <div className="animate__animated animate__fadeInUp xl:w-[60%] py-[150px] lg:w-[65%] md:w-[70%] sm:w-[85%] w-[85%] m-auto pb-[50px]">
+
+        {/* Why Choose Us Section */}
+        <section className="w-full box-border xl:py-[100px] lg:py-[100px] md:py-[100px] sm:py-[100px] py-[100px] box-border bg-[#001125]">
+          <div className="xl:w-[60%] lg:w-[60%] md:w-[80%] sm:w-[95%] w-[95%] box-border lg:w-[70%] md:w-[80%] sm:w-[95%] w-[95%] m-auto">
+            <h1 className="xl:w-[200px] lg:w-[200px] md:w-[180px] sm:w-[150px] w-[150px] m-auto border-b border-b-[1px] pb-[8px] border-b-solid border-b-white text-center font-semibold xl:text-[20px] lg:text-[20px] md:text-[18px] sm:text-[16px] text-[16px] text-white">
+              Why Choose Use?
+            </h1>
+            <div className="xl:w-[100%] lg:w-[100%] md:w-[100%] sm:w-[70%] w-[70%] mx-auto xl:mt-[100px] lg:mt-[100px] md:mt-[100px] sm:mt-[50px] mt-[50px] flex xl:flex-row lg:flex-row md:flex-row sm:flex-col flex-col gap-[60px]">
+              <WhyChooseUs
+                image={quality}
+                title="Grade-A Quality Assurance"
+                description="All our products are sourced directly from the UK, ensuring the highest standards of quality and reliability."
+              />
+              <WhyChooseUs
+                image={imports}
+                title="Bulk Import/Export Expertise"
+                description="We specialize in bulk imports, offering competitive pricing and seamless logistics for businesses."
+              />
+              <WhyChooseUs
+                image={custom}
+                title="Custom Sourcing"
+                description="Need something specific? We source special items tailored to your unique requirements."
+              />
+            </div>
+            <div className="w-[70%] mx-auto mt-[50px] flex xl:flex-row lg:flex-row md:flex-row sm:flex-col flex-col gap-[40px]">
+              <WhyChooseUs
+                image={trust}
+                title="Transparency and Trust"
+                description="We believe in building trust through honesty, clear communication, and ethical business practices."
+              />
+              <WhyChooseUs
+                image={sales}
+                title="Clearance Sales"
+                description="Take advantage of exclusive clearance deals on premium UK products."
+              />
+            </div>
+          </div>
+        </section>
+        <div className="xl:w-[60%] py-[100px] lg:w-[65%] md:w-[70%] sm:w-[85%] w-[85%] m-auto pb-[50px]">
           <h1 className="mb-[10px] text-center font-semibold xl:text-[20px] lg:text-[20px] md:text-[18px] sm:text-[16px] text-[16px]">
             Join Us on Our Journey
           </h1>

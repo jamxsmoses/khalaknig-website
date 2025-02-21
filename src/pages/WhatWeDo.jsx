@@ -1,5 +1,4 @@
 import ServiceControl from "../components/ServiceControl";
-import { useState } from "react";
 import AgricMaterials from "./Services/AgricMaterials";
 import AgricProduce from "./Services/AgricProduce";
 import Textiles from "./Services/Textiles";
@@ -11,28 +10,34 @@ import Machinery from "./Services/Machinery";
 import CustomSourcing from "./Services/CustomSourcing";
 import "animate.css";
 import CallToAction from "../components/CallToAction";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
-export default function WhatWeDo() {
-  const [activeService, setActiveService] = useState(1);
+export default function WhatWeDo(prop) {
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scroll to the top of the page
+  }, [location.pathname]); // Trigger on route change
 
   function contentToShow() {
-    if (activeService === 1) {
+    if (prop.activeService === 1) {
       return <AgricMaterials />;
-    } else if (activeService === 2) {
+    } else if (prop.activeService === 2) {
       return <AgricProduce />;
-    } else if (activeService === 3) {
+    } else if (prop.activeService === 3) {
       return <Textiles />;
-    } else if (activeService === 4) {
+    } else if (prop.activeService === 4) {
       return <Electronics />;
-    } else if (activeService === 5) {
+    } else if (prop.activeService === 5) {
       return <Gadgets />;
-    } else if (activeService === 6) {
+    } else if (prop.activeService === 6) {
       return <Utensils />;
-    } else if (activeService === 7) {
+    } else if (prop.activeService === 7) {
       return <Automobiles />;
-    } else if (activeService === 8) {
+    } else if (prop.activeService === 8) {
       return <Machinery />;
-    } else if (activeService === 9) {
+    } else if (prop.activeService === 9) {
       return <CustomSourcing />;
     }
   }
@@ -47,73 +52,73 @@ export default function WhatWeDo() {
         </div>
         <div className="controls xl:text-[13px] lg:text-[13px] md:text-[12px] sm:text-[11px] text-[11px] overflow-x-scroll xl:w-[85%] lg:w-[85%] md:w-[90%] sm:w-[98%] w-[98%] m-auto xl:h-[70px] lg:h-[70px] md:h-[70px] sm:h-[70px] h-[70px] bg-gray-300 mt-[20px] box-border px-[5px] gap-x-[5px] flex items-center xl:justify-center lg:justify-center md:justify-left sm:justify-left justify-left">
           <div
-            onClick={() => setActiveService(1)}
+            onClick={() => prop.setActiveService(1)}
             className={`${
-              activeService === 1 ? "activeInner" : ""
+              prop.activeService === 1 ? "activeInner" : ""
             } inner xl:w-[200px] lg:w-[200px] md:w-[200px] sm:w-[200px] w-[200px] box-border px-[10px] h-[85%] flex text-center justify-center items-center rounded-[5px]`}
           >
             <ServiceControl title="Agricultural Materials" />
           </div>
           <div
-            onClick={() => setActiveService(2)}
+            onClick={() => prop.setActiveService(2)}
             className={`${
-              activeService === 2 ? "activeInner" : ""
+              prop.activeService === 2 ? "activeInner" : ""
             } inner xl:w-[200px] lg:w-[200px] md:w-[180px] sm:w-[150px] w-[150px] box-border px-[10px] h-[85%] flex text-center justify-center items-center rounded-[5px]`}
           >
             <ServiceControl title="Agricultural Produce" />
           </div>
           <div
-            onClick={() => setActiveService(3)}
+            onClick={() => prop.setActiveService(3)}
             className={`${
-              activeService === 3 ? "activeInner" : ""
+              prop.activeService === 3 ? "activeInner" : ""
             } inner xl:w-[200px] lg:w-[200px] md:w-[180px] sm:w-[150px] w-[150px] box-border px-[10px] h-[85%] flex text-center justify-center items-center rounded-[5px]`}
           >
             <ServiceControl title="Textiles/Fabrics" />
           </div>
           <div
-            onClick={() => setActiveService(4)}
+            onClick={() => prop.setActiveService(4)}
             className={`${
-              activeService === 4 ? "activeInner" : ""
+              prop.activeService === 4 ? "activeInner" : ""
             } inner xl:w-[200px] lg:w-[200px] md:w-[180px] sm:w-[150px] w-[150px] box-border px-[10px] h-[85%] flex text-center justify-center items-center rounded-[5px]`}
           >
             <ServiceControl title="Electronics" />
           </div>
           <div
-            onClick={() => setActiveService(5)}
+            onClick={() => prop.setActiveService(5)}
             className={`${
-              activeService === 5 ? "activeInner" : ""
+              prop.activeService === 5 ? "activeInner" : ""
             } inner xl:w-[200px] lg:w-[200px] md:w-[180px] sm:w-[150px] w-[150px] box-border px-[10px] h-[85%] flex text-center justify-center items-center rounded-[5px]`}
           >
             <ServiceControl title="Gadgets" />
           </div>
           <div
-            onClick={() => setActiveService(6)}
+            onClick={() => prop.setActiveService(6)}
             className={`${
-              activeService === 6 ? "activeInner" : ""
+              prop.activeService === 6 ? "activeInner" : ""
             } inner xl:w-[200px] lg:w-[200px] md:w-[180px] sm:w-[150px] w-[150px] box-border px-[10px] h-[85%] flex text-center justify-center items-center rounded-[5px]`}
           >
             <ServiceControl title="Kitchen Utensils" />
           </div>
           <div
-            onClick={() => setActiveService(7)}
+            onClick={() => prop.setActiveService(7)}
             className={`${
-              activeService === 7 ? "activeInner" : ""
+              prop.activeService === 7 ? "activeInner" : ""
             } inner xl:w-[200px] lg:w-[200px] md:w-[180px] sm:w-[150px] w-[150px] box-border px-[10px] h-[85%] flex text-center justify-center items-center rounded-[5px]`}
           >
             <ServiceControl title="Automobiles" />
           </div>
           <div
-            onClick={() => setActiveService(8)}
+            onClick={() => prop.setActiveService(8)}
             className={`${
-              activeService === 8 ? "activeInner" : ""
+              prop.activeService === 8 ? "activeInner" : ""
             } inner xl:w-[200px] lg:w-[200px] md:w-[180px] sm:w-[150px] w-[150px] box-border px-[10px] h-[85%] flex text-center justify-center items-center rounded-[5px]`}
           >
             <ServiceControl title="Farm Equipment/Machinery" />
           </div>
           <div
-            onClick={() => setActiveService(9)}
+            onClick={() => prop.setActiveService(9)}
             className={`${
-              activeService === 9 ? "activeInner" : ""
+              prop.activeService === 9 ? "activeInner" : ""
             } inner xl:w-[200px] lg:w-[200px] md:w-[180px] sm:w-[150px] w-[150px] box-border px-[10px] h-[85%] flex text-center justify-center items-center rounded-[5px]`}
           >
             <ServiceControl title="Custom Sourcing Services" />
@@ -151,7 +156,7 @@ export default function WhatWeDo() {
             </ul>
           </div>
         </div>
-        <div className="animate__animated animate__fadeInUp xl:w-[70%] lg:w-[75%] md: w-[85%] sm:w-[95%] w-[95%] m-auto text-center pb-[100px]">
+        <div className="xl:w-[70%] lg:w-[75%] md: w-[85%] sm:w-[95%] w-[95%] m-auto text-center pb-[100px]">
           <CallToAction
             title="Reach Out To US"
             description="Is there something you would like to discuss with us? Send us a message and we will respond as soon as possible."

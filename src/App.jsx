@@ -9,6 +9,7 @@ import Contact from "./pages/Contact";
 import Footer from "./components/Footer";
 
 export default function App() {
+  const [activeService, setActiveService] = useState(1);
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
   return (
@@ -21,9 +22,20 @@ export default function App() {
         <Header isOpen={isOpen} setIsOpen={setIsOpen} />
         <div className="main w-[100%]">
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route
+              path="/"
+              element={<Home setActiveService={setActiveService} />}
+            />
             <Route path="/about-us" element={<AboutUs />} />
-            <Route path="/what-we-do" element={<WhatWeDo />} />
+            <Route
+              path="/what-we-do"
+              element={
+                <WhatWeDo
+                  activeService={activeService}
+                  setActiveService={setActiveService}
+                />
+              }
+            />
             <Route path="/what-we-do/:id" element={<WhatWeDo />} />
             <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/contact" element={<Contact />} />

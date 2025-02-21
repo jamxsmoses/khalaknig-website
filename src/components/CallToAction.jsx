@@ -32,7 +32,7 @@ export default function CallToAction(prop) {
   return (
     <div className="w-full mt-[50px]">
       <div>
-        <h1 className="animate__animated animate__fadeInUp xl:text-[20px] lg:text-[20px] md:text-[18px] sm:text-[16px] text-[16px] font-bold mb-[10px]">
+        <h1 className="xl:text-[20px] lg:text-[20px] md:text-[18px] sm:text-[16px] text-[16px] font-bold mb-[10px]">
           {prop.title}
         </h1>
         <h2 className="m-auto xl:w-[55%] lg:w-[65%] md:w-[75%] sm:w-[85%] w-[85%] animate__animated animate__fadeInUp xl:text-[13px] lg:text-[13px] md:text-[12px] sm:text-[11px] text-[11px] mb-[5px]">
@@ -73,15 +73,6 @@ export default function CallToAction(prop) {
             className="rounded-[4px] xl:text-[14px] lg:text-[13px] md:text-[12px] sm:text-[10px] text-[10px] mb-[10px] border outline-none border-none p-[12px] bg-white"
             type="text"
             placeholder="Enter your phone number"
-          />
-          <label className="mb-[2px] xl:text-[16px] lg:text-[15px] md:text-[14px] sm:text-[12px] text-[12px]">
-            Subject
-          </label>
-          <input
-            name="subject"
-            className="rounded-[4px] xl:text-[14px] lg:text-[13px] md:text-[12px] sm:text-[10px] text-[10px] mb-[10px] border outline-none border-none p-[12px] bg-white"
-            type="text"
-            placeholder="Enter your Subject"
           />
           <label className="mb-[2px] xl:text-[16px] lg:text-[15px] md:text-[14px] sm:text-[12px] text-[12px]">
             Message

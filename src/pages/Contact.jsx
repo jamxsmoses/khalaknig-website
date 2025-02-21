@@ -4,8 +4,16 @@ import address from "./Contact/address.png";
 import mail from "./Contact/mail.png";
 import CallToAction from "../components/CallToAction";
 import MyMap from "../components/Map";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 export default function Contact() {
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scroll to the top of the page
+  }, [location.pathname]); // Trigger on route change
+
   return (
     <div className="w-full bg-white flex justify-center items-center pt-[10%] pb-[100px]">
       <div className="pt-[100px] xl:w-[70%] lg:w-[75%] md: w-[85%] sm:w-[95%] w-[95%] m-auto text-center">
@@ -96,7 +104,7 @@ export default function Contact() {
             <MyMap />
           </div>
         </div>
-        <div className="animate__animated animate__fadeInUp">
+        <div>
           <CallToAction
             title="Reach Out To US"
             description="Is there something you would like to discuss with us? Send us a message and we will respond as soon as possible."

@@ -1,8 +1,6 @@
 import mission from "./About Us/mission.png";
 import vision from "./About Us/vision.png";
 import values from "./About Us/values.png";
-import ServicesBtn from "../components/servicesBtn";
-import Button from "../components/Button";
 import charcoalImg from "../assets/Services Images/charcoal.jpg";
 import yamImg from "../assets/Services Images/yam.png";
 import machinery from "../assets/Services Images/machinery.png";
@@ -21,22 +19,31 @@ import imports from "../assets/imports.png";
 import custom from "../assets/custom.png";
 import trust from "../assets/trust.png";
 import sales from "../assets/sale.png";
+import { useNavigate } from "react-router-dom";
 
-function AboutUs() {
+function AboutUs(prop) {
+  const navigate = useNavigate();
+  const setActiveService = prop.setActiveService;
   const location = useLocation();
 
   useEffect(() => {
     window.scrollTo(0, 0); // Scroll to the top of the page
   }, [location.pathname]); // Trigger on route change
 
+  function handleClick(num) {
+    // event.preventDefault();
+    setActiveService(num);
+    navigate("/what-we-do");
+  }
+
   return (
     <div className="w-full bg-white flex items-end">
       <div className="w-full pt-[10vh]">
-        <div className="animate__animated animate__fadeInUp w-full m-auto bg-[#008bf2] text-center mt-[10px] py-[100px]">
-          <h1 className="text-white xl:text-[25px] lg:text-[23px] md:text-[20px] sm:text-[18px] text-[17px]">
+        <div className="w-full m-auto bg-[#008bf2] text-center mt-[10px] py-[100px]">
+          <h1 className="animate__animated animate__fadeInUp text-white xl:text-[25px] lg:text-[23px] md:text-[20px] sm:text-[18px] text-[17px]">
             Who We Are
           </h1>
-          <p className="xl:w-[50%] lg:w-[55%] md:w-[70%] sm:w-[90%] w-[90%] xl:text-[16px] lg:text-[16px] md:text-[14px] sm:text-[12px] text-[12px] text-white text-center leading-[1.4] m-auto">
+          <p className="animate__animated animate__fadeInUp xl:w-[50%] lg:w-[55%] md:w-[70%] sm:w-[90%] w-[90%] xl:text-[16px] lg:text-[16px] md:text-[14px] sm:text-[12px] text-[12px] text-white text-center leading-[1.4] m-auto">
             At Khalak Nigeria Limited, we specialize in sourcing and delivering
             high-quality, grade-A products from the United Kingdom to meet the
             needs of businesses and individuals across countries. Whether you’re
@@ -139,35 +146,156 @@ function AboutUs() {
             </div>
           </div>
         </div>
-        <section
-          id="services"
-          className="animate__animated animate__fadeInUp services1 w-full box-border py-[100px] box-border bg-[#d4edff]"
-        >
+        <section className=" services1 w-full box-border py-[100px] box-border bg-[#d4edff]">
           <div className="w-full">
-            <h1 className="xl:w-[150px] lg:w-[150px] md:w-[140px] sm:w-[130px] w-[130px] m-auto border-b border-b-[1px] pb-[5px] border-b-solid border-b-black text-center font-semibold xl:text-[20px] lg:text-[20px] md:text-[18px] sm:text-[16px] text-[16px] text-black">
+            <h1 className="animate__animated animate__fadeInUp xl:w-[150px] lg:w-[150px] md:w-[140px] sm:w-[130px] w-[130px] m-auto border-b border-b-[1px] pb-[5px] border-b-solid border-b-black text-center font-semibold xl:text-[20px] lg:text-[20px] md:text-[18px] sm:text-[16px] text-[16px] text-black">
               What We Do
             </h1>
-            <div className="servicesContainer w-[70%] mx-auto flex justify-center gap-x-[50px] gap-y-[50px] mt-[50px]">
-              <ServicesBtn
-                title="Export of Agricultural Materials"
-                img={charcoalImg}
-              />
-              <ServicesBtn
-                img={yamImg}
-                title="Export of Agricultural Produce"
-              />
-              <ServicesBtn
-                img={textiles}
-                title="Import of UK Textiles and Fabrics"
-              />
-              <ServicesBtn img={electronics} title="Import of Electronics" />
-              <ServicesBtn img={gadgets} title="Import of Gadgets" />
-              <ServicesBtn img={utensils} title="Import of Kitchen Utensils" />
-              <ServicesBtn img={automobile} title="Import of Automobiles" />
-              <ServicesBtn
-                img={machinery}
-                title="Import of Farm Equipment and Machinery"
-              />
+            <div className="animate__animated animate__fadeInUp servicesContainer w-[70%] mx-auto flex justify-center gap-x-[50px] gap-y-[50px] mt-[50px]">
+              <div className="rounded-[10px] overflow-hidden service xl:w-[250px] lg:w-[250px] md:w-[270px] sm:w-[290px] w-[290px] text-center flex flex-col items-center justify-center">
+                <div className="serviceBgImg w-full h-[200px] overflow-hidden flex justify-center itmes-center">
+                  <img src={charcoalImg} alt="" />
+                </div>
+                <div className="flex flex-col gap-y-[5px] items-center justify-center w-full h-[140px] bg-[#001125] px-[20px]">
+                  <h1 className="m-[0px] text-white font-semibold text-center px-[20px] xl:text-[16px] lg:text-[15px] md:text-[14px] sm:text-[13px] text-[13px]">
+                    Export of Agricultural Materials
+                  </h1>
+                  <div className="">
+                    <button
+                      onClick={() => handleClick(1)}
+                      className="bg-blue-600 text-white button xl:w-[150px] lg:w-[140px] md:w-[120px] sm:w-[100px] w-[110px] xl:text-[15px] lg:text-[15px] md:text-[13px] sm:text-[12px] text-[12px] rounded-[5px] text-[#1e0008] leading-none px-[12px] py-[10px] font-medium"
+                    >
+                      Learn More
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div className="rounded-[10px] overflow-hidden service xl:w-[250px] lg:w-[250px] md:w-[270px] sm:w-[290px] w-[290px] text-center flex flex-col items-center justify-center">
+                <div className="serviceBgImg w-full h-[200px] overflow-hidden flex justify-center itmes-center">
+                  <img src={yamImg} alt="" />
+                </div>
+                <div className="flex flex-col gap-y-[5px] items-center justify-center w-full h-[140px] bg-[#001125] px-[20px]">
+                  <h1 className="m-[0px] text-white font-semibold text-center px-[20px] xl:text-[16px] lg:text-[15px] md:text-[14px] sm:text-[13px] text-[13px]">
+                    Export of Agricultural Produce
+                  </h1>
+                  <div className="">
+                    <button
+                      onClick={() => handleClick(2)}
+                      className="bg-blue-600 text-white button xl:w-[150px] lg:w-[140px] md:w-[120px] sm:w-[100px] w-[110px] xl:text-[15px] lg:text-[15px] md:text-[13px] sm:text-[12px] text-[12px] rounded-[5px] text-[#1e0008] leading-none px-[12px] py-[10px] font-medium"
+                    >
+                      Learn More
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div className="rounded-[10px] overflow-hidden service xl:w-[250px] lg:w-[250px] md:w-[270px] sm:w-[290px] w-[290px] text-center flex flex-col items-center justify-center">
+                <div className="serviceBgImg w-full h-[200px] overflow-hidden flex justify-center itmes-center">
+                  <img src={textiles} alt="" />
+                </div>
+                <div className="flex flex-col gap-y-[5px] items-center justify-center w-full h-[140px] bg-[#001125] px-[20px]">
+                  <h1 className="m-[0px] text-white font-semibold text-center px-[20px] xl:text-[16px] lg:text-[15px] md:text-[14px] sm:text-[13px] text-[13px]">
+                    Import of UK Textiles and Fabrics
+                  </h1>
+                  <div className="">
+                    <button
+                      onClick={() => handleClick(3)}
+                      className="bg-blue-600 text-white button xl:w-[150px] lg:w-[140px] md:w-[120px] sm:w-[100px] w-[110px] xl:text-[15px] lg:text-[15px] md:text-[13px] sm:text-[12px] text-[12px] rounded-[5px] text-[#1e0008] leading-none px-[12px] py-[10px] font-medium"
+                    >
+                      Learn More
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div className="rounded-[10px] overflow-hidden service xl:w-[250px] lg:w-[250px] md:w-[270px] sm:w-[290px] w-[290px] text-center flex flex-col items-center justify-center">
+                <div className="serviceBgImg w-full h-[200px] overflow-hidden flex justify-center itmes-center">
+                  <img src={electronics} alt="" />
+                </div>
+                <div className="flex flex-col gap-y-[5px] items-center justify-center w-full h-[140px] bg-[#001125] px-[20px]">
+                  <h1 className="m-[0px] text-white font-semibold text-center px-[20px] xl:text-[16px] lg:text-[15px] md:text-[14px] sm:text-[13px] text-[13px]">
+                    Import of Electronics
+                  </h1>
+                  <div className="">
+                    <button
+                      onClick={() => handleClick(4)}
+                      className="bg-blue-600 text-white button xl:w-[150px] lg:w-[140px] md:w-[120px] sm:w-[100px] w-[110px] xl:text-[15px] lg:text-[15px] md:text-[13px] sm:text-[12px] text-[12px] rounded-[5px] text-[#1e0008] leading-none px-[12px] py-[10px] font-medium"
+                    >
+                      Learn More
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div className="rounded-[10px] overflow-hidden service xl:w-[250px] lg:w-[250px] md:w-[270px] sm:w-[290px] w-[290px] text-center flex flex-col items-center justify-center">
+                <div className="serviceBgImg w-full h-[200px] overflow-hidden flex justify-center itmes-center">
+                  <img src={gadgets} alt="" />
+                </div>
+                <div className="flex flex-col gap-y-[5px] items-center justify-center w-full h-[140px] bg-[#001125] px-[20px]">
+                  <h1 className="m-[0px] text-white font-semibold text-center px-[20px] xl:text-[16px] lg:text-[15px] md:text-[14px] sm:text-[13px] text-[13px]">
+                    Import of Gadgets
+                  </h1>
+                  <div className="">
+                    <button
+                      onClick={() => handleClick(5)}
+                      className="bg-blue-600 text-white button xl:w-[150px] lg:w-[140px] md:w-[120px] sm:w-[100px] w-[110px] xl:text-[15px] lg:text-[15px] md:text-[13px] sm:text-[12px] text-[12px] rounded-[5px] text-[#1e0008] leading-none px-[12px] py-[10px] font-medium"
+                    >
+                      Learn More
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div className="rounded-[10px] overflow-hidden service xl:w-[250px] lg:w-[250px] md:w-[270px] sm:w-[290px] w-[290px] text-center flex flex-col items-center justify-center">
+                <div className="serviceBgImg w-full h-[200px] overflow-hidden flex justify-center itmes-center">
+                  <img src={utensils} alt="" />
+                </div>
+                <div className="flex flex-col gap-y-[5px] items-center justify-center w-full h-[140px] bg-[#001125] px-[20px]">
+                  <h1 className="m-[0px] text-white font-semibold text-center px-[20px] xl:text-[16px] lg:text-[15px] md:text-[14px] sm:text-[13px] text-[13px]">
+                    Import of Kitchen Utensils
+                  </h1>
+                  <div className="">
+                    <button
+                      onClick={() => handleClick(6)}
+                      className="bg-blue-600 text-white button xl:w-[150px] lg:w-[140px] md:w-[120px] sm:w-[100px] w-[110px] xl:text-[15px] lg:text-[15px] md:text-[13px] sm:text-[12px] text-[12px] rounded-[5px] text-[#1e0008] leading-none px-[12px] py-[10px] font-medium"
+                    >
+                      Learn More
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div className="rounded-[10px] overflow-hidden service xl:w-[250px] lg:w-[250px] md:w-[270px] sm:w-[290px] w-[290px] text-center flex flex-col items-center justify-center">
+                <div className="serviceBgImg w-full h-[200px] overflow-hidden flex justify-center itmes-center">
+                  <img src={automobile} alt="" />
+                </div>
+                <div className="flex flex-col gap-y-[5px] items-center justify-center w-full h-[140px] bg-[#001125] px-[20px]">
+                  <h1 className="m-[0px] text-white font-semibold text-center px-[20px] xl:text-[16px] lg:text-[15px] md:text-[14px] sm:text-[13px] text-[13px]">
+                    Import of Automobils
+                  </h1>
+                  <div className="">
+                    <button
+                      onClick={() => handleClick(7)}
+                      className="bg-blue-600 text-white button xl:w-[150px] lg:w-[140px] md:w-[120px] sm:w-[100px] w-[110px] xl:text-[15px] lg:text-[15px] md:text-[13px] sm:text-[12px] text-[12px] rounded-[5px] text-[#1e0008] leading-none px-[12px] py-[10px] font-medium"
+                    >
+                      Learn More
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div className="rounded-[10px] overflow-hidden service xl:w-[250px] lg:w-[250px] md:w-[270px] sm:w-[290px] w-[290px] text-center flex flex-col items-center justify-center">
+                <div className="serviceBgImg w-full h-[200px] overflow-hidden flex justify-center itmes-center">
+                  <img src={machinery} alt="" />
+                </div>
+                <div className="flex flex-col gap-y-[5px] items-center justify-center w-full h-[140px] bg-[#001125] px-[20px]">
+                  <h1 className="m-[0px] text-white font-semibold text-center px-[20px] xl:text-[16px] lg:text-[15px] md:text-[14px] sm:text-[13px] text-[13px]">
+                    Import of Farm Equipment/Machinery
+                  </h1>
+                  <div className="">
+                    <button
+                      onClick={() => handleClick(8)}
+                      className="bg-blue-600 text-white button xl:w-[150px] lg:w-[140px] md:w-[120px] sm:w-[100px] w-[110px] xl:text-[15px] lg:text-[15px] md:text-[13px] sm:text-[12px] text-[12px] rounded-[5px] text-[#1e0008] leading-none px-[12px] py-[10px] font-medium"
+                    >
+                      Learn More
+                    </button>
+                  </div>
+                </div>
+              </div>
               <div className="rounded-[10px] overflow-hidden service xl:w-[550px] lg:w-[550px] md:w-[270px] sm:w-[290px] w-[290px] text-center flex flex-col items-center justify-center">
                 <div className="flex flex-col gap-y-[15px] items-center justify-center w-full h-[240px] bg-[#001125] px-[20px]">
                   <h1 className="my-[0px] text-white font-semibold text-center px-[20px] xl:text-[16px] lg:text-[15px] md:text-[14px] sm:text-[13px] text-[13px] mt-[14px]">
@@ -178,11 +306,12 @@ function AboutUs() {
                     tailored to your exact requirements.
                   </p>
                   <div className="">
-                    <Button
-                      title="Get in Touch"
-                      color="#006dee"
-                      textColor="#fff"
-                    />
+                    <button
+                      onClick={() => handleClick(9)}
+                      className="bg-blue-600 text-white button xl:w-[150px] lg:w-[140px] md:w-[120px] sm:w-[100px] w-[110px] xl:text-[15px] lg:text-[15px] md:text-[13px] sm:text-[12px] text-[12px] rounded-[5px] text-[#1e0008] leading-none px-[12px] py-[10px] font-medium"
+                    >
+                      Learn More
+                    </button>
                   </div>
                 </div>
               </div>

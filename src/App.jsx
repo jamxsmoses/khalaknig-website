@@ -26,7 +26,10 @@ export default function App() {
               path="/"
               element={<Home setActiveService={setActiveService} />}
             />
-            <Route path="/about-us" element={<AboutUs />} />
+            <Route
+              path="/about-us"
+              element={<AboutUs setActiveService={setActiveService} />}
+            />
             <Route
               path="/what-we-do"
               element={

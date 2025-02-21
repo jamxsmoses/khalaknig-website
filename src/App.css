@@ -1,0 +1,9 @@
+.app {
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.app .main {
+  box-sizing: border-box;
+  z-index: 1;
+}

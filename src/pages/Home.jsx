@@ -28,7 +28,6 @@ import { useLocation } from "react-router-dom";
 export default function Home(prop) {
   const navigate = useNavigate();
   const setActiveService = prop.setActiveService;
-
   const location = useLocation();
 
   useEffect(() => {

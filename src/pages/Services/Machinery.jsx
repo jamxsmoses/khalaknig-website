@@ -41,9 +41,9 @@ function Machinery() {
         <div className="xl:text-left lg:text-left md:text-center sm:text-center text-center xl:w-[50%] lg:w-[50%] md:w-[90%] sm:w-[95%] w-[95%] xl:mx-0 lg:mx-0 md:mx-auto sm:mx-auto mx-auto">
           <p className="xl:text-[16px] lg:text-[16px] md:text-[15px] sm:text-[13px] text-[13px] leading-[1.4] xl:mt-[0px] lg:mt-[0px] md:mt-[20px] sm:mt-[20px] mt-[20px]">
             Boost your agricultural productivity with UK-grade farm equipment
-            and machinery imported by Khalak Nigeria Limited. From tractors to
-            harvesters, we provide durable, high-performance tools designed to
-            meet the demands of modern farming.
+            and machinery imported by <b>Khalak Nigeria Limited</b>. From
+            tractors to harvesters, we provide durable, high-performance tools
+            designed to meet the demands of modern farming.
           </p>
           <h1 className="xl:text-[18px] lg:text-[18px] md:text-[17px] sm:text-[15px] text-[15px] mt-[40px] font-bold underline mb-[20px]">
             Why Choose Our Farm Equipment?

@@ -134,11 +134,6 @@ export default function WhatWeDo(prop) {
             </h1>
             <ul className="leading-[1.5] text-center xl:text-[16px] lg:text-[16px] md:text-[15px] sm:text-[13px] text-[13px]">
               <li className="mb-[15px]">
-                <b>Global Expertise:</b>
-                <br></br> We have years of experience in international trade,
-                ensuring smooth and efficient operations.
-              </li>
-              <li className="mb-[15px]">
                 <b>Quality Assurance:</b>
                 <br></br> Every product we import or export meets the highest
                 standards of quality.

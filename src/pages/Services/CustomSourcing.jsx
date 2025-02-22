@@ -11,10 +11,10 @@ function CustomSourcing() {
       <div className="animate__animated animate__fadeInUp py-[50px] flex xl:flex-row lg:flex-row md:flex-col sm:flex-col flex-col gap-x-[60px] box-border">
         <div className="text-center xl:w-[70%] lg:w-[70%] md:w-[90%] sm:w-[95%] w-[95%] mx-auto">
           <p className="xl:text-[16px] lg:text-[16px] md:text-[15px] sm:text-[13px] text-[13px] leading-[1.4] xl:mt-[0px] lg:mt-[0px] md:mt-[20px] sm:mt-[20px] mt-[20px]">
-            At Khalak Nigeria Limited, we understand that every business has
-            unique needs. That’s why we offer custom sourcing services to help
-            you find specific and special items. Whether it’s a rare product, a
-            specific brand, or a bulk order, we’ve got you covered.
+            At <b>Khalak Nigeria Limited</b>, we understand that every business
+            has unique needs. That’s why we offer custom sourcing services to
+            help you find specific and special items. Whether it’s a rare
+            product, a specific brand, or a bulk order, we’ve got you covered.
           </p>
           <h1 className="xl:text-[18px] lg:text-[18px] md:text-[17px] sm:text-[15px] text-[15px] mt-[40px] font-bold underline mb-[20px]">
             Why Choose Our Custom Sourcing Services?

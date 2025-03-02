@@ -11,12 +11,13 @@ function Footer() {
               About Us
             </h1>
             <p className="leading-[1.3] text-white xl:text-[11px] lg:text-[11px] md:text-[10px] sm:text-[9px] text-[9px]">
-              At Khalak Nigeria Limited, we specialize in sourcing and
-              delivering high-quality, grade-A products from the United Kingdom
-              to meet the needs of businesses and individuals across countries.
-              Whether you’re looking for agricultural materials, electronics,
-              textiles, or specialized items, we are your one-stop solution for
-              premium imports.
+              At Khalak Nigeria Limited, we specialize in delivering
+              high-quality, sustainably sourced charcoal to clients worldwide.
+              With a commitment to quality, sustainability, and customer
+              satisfaction, we are your trusted partner for premium charcoal
+              exports. Whether you’re a wholesaler, retailer, or industrial
+              user, our charcoal is designed to deliver unmatched performance
+              and reliability.
             </p>
             <button
               style={{ transitionDuration: "0.3s" }}

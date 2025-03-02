@@ -119,7 +119,10 @@ button {
 }
 
 .home .hero {
-  background-image: url(./assets/HomeImgs/1.jpg);
+  background-image: url(https://www.icirnigeria.org/wp-content/uploads/2019/02/Charcoal-factory5.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
 .home .hero .hero2 {

@@ -21,9 +21,7 @@ export default function WhatWeDo(prop) {
   }, [location.pathname]); // Trigger on route change
 
   function contentToShow() {
-    if (prop.activeService === 1) {
-      return <AgricMaterials />;
-    } else if (prop.activeService === 2) {
+    if (prop.activeService === 2) {
       return <AgricProduce />;
     } else if (prop.activeService === 3) {
       return <Textiles />;
@@ -51,14 +49,6 @@ export default function WhatWeDo(prop) {
           </h1>
         </div>
         <div className="controls xl:text-[13px] lg:text-[13px] md:text-[12px] sm:text-[11px] text-[11px] overflow-x-scroll xl:w-[85%] lg:w-[85%] md:w-[90%] sm:w-[98%] w-[98%] m-auto xl:h-[70px] lg:h-[70px] md:h-[70px] sm:h-[70px] h-[70px] bg-gray-300 mt-[20px] box-border px-[5px] gap-x-[5px] flex items-center xl:justify-center lg:justify-center md:justify-left sm:justify-left justify-left">
-          <div
-            onClick={() => prop.setActiveService(1)}
-            className={`${
-              prop.activeService === 1 ? "activeInner" : ""
-            } inner xl:w-[200px] lg:w-[200px] md:w-[200px] sm:w-[200px] w-[200px] box-border px-[10px] h-[85%] flex text-center justify-center items-center rounded-[5px]`}
-          >
-            <ServiceControl title="Agricultural Materials" />
-          </div>
           <div
             onClick={() => prop.setActiveService(2)}
             className={`${

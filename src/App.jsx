@@ -9,7 +9,7 @@ import Contact from "./pages/Contact";
 import Footer from "./components/Footer";
 
 export default function App() {
-  const [activeService, setActiveService] = useState(1);
+  const [activeService, setActiveService] = useState(2);
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
   return (

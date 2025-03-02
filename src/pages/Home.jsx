@@ -58,7 +58,7 @@ export default function Home(prop) {
               <div className="flex mt-[20px] gap-x-[10px]">
                 <Button
                   title="Learn More"
-                  to="/what-we-do"
+                  to="/about-us"
                   color="#fff"
                   textColor="black"
                 />

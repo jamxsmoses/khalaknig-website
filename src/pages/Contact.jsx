@@ -57,8 +57,11 @@ export default function Contact() {
                 Nigerian Offices
               </p>
               <ul className="ml-[20px] list-disc mb-[10px] leading-[1.4] xl:text-[14px] lg:text-[14px] md:text-[12px] sm:text-[11px] text-[11px]">
-                <li>Plot 69, Owuru/Farm Road, Rumowha, ENEKA, Rivers State.</li>
-                <li>27 Enji Dam Area, 40 Room, Offa, Kwara State.</li>
+                <li>
+                  Plot 69, Owuru/Farm Road, Rumowha, Eneka, Rivers State,
+                  Nigeria.
+                </li>
+                <li>27 Enji Dam Area, 40 Room, Offa, Kwara State, Nigeria.</li>
               </ul>
               <p className="font-bold text-blue-600 xl:text-[11px] lg:text-[11px] md:text-[9px] sm:text-[8px] text-[8px]">
                 UK Office

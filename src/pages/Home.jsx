@@ -50,9 +50,12 @@ export default function Home(prop) {
                 Your Trusted Partner for Premium Charcoal Exports
               </h1>
               <p className="text-white xl:text-[16px] lg:text-[16px] md:text-[14px] sm:text-[12px] text-[12px] xl:w-[35%] lg:w-[40%] md:w-[60%] sm:w-[55%] w-[70%] text-center">
-                We specialize in exporting high-quality, sustainably sourced
-                charcoal to global markets. From sourcing to delivery, we ensure
-                excellence at every step.
+                We are a multi-talented entity who specialises in exporting
+                high-quality, sustainably charcoals and other agricultural
+                products to global markets. We also take a global stage in
+                importing of varieties of commodities to the Nigerian market.
+                <br></br>
+                From sourcing to delivery, we ensure excellence at every step.
               </p>
 
               <div className="flex mt-[20px] gap-x-[10px]">
